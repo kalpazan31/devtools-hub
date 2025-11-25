@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to bottom, #0a0a0a, #111111);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Dark mode default */
+html.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+html.dark body {
+  background: linear-gradient(to bottom, #0a0a0a, #111111);
+}
+
+/* Light mode */
+html:not(.dark) {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+}
+
+html:not(.dark) body {
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+  color: #0a0a0a;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Selection */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fff;
+}
+
+/* Code/Textarea Styles */
+.font-mono {
+  font-family: var(--font-mono), 'Fira Code', 'Consolas', monospace;
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tool Cards Hover Effect */
+.tool-card {
+  transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Input Focus Styles */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+/* Button Active State */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+}
+
+/* Light mode adjustments */
+html:not(.dark) .bg-gray-800\/50 {
+  background-color: rgba(243, 244, 246, 0.8);
+}
+
+html:not(.dark) .bg-gray-800 {
+  background-color: #e5e7eb;
+}
+
+html:not(.dark) .bg-gray-900 {
+  background-color: #f3f4f6;
+}
+
+html:not(.dark) .bg-gray-900\/50 {
+  background-color: rgba(243, 244, 246, 0.5);
+}
+
+html:not(.dark) .border-gray-700 {
+  border-color: #d1d5db;
+}
+
+html:not(.dark) .border-gray-800 {
+  border-color: #e5e7eb;
+}
+
+html:not(.dark) .text-gray-300 {
+  color: #374151;
+}
+
+html:not(.dark) .text-gray-400 {
+  color: #6b7280;
+}
+
+html:not(.dark) .text-gray-500 {
+  color: #9ca3af;
+}
+
+html:not(.dark) .text-white {
+  color: #111827;
+}
+
+html:not(.dark) .text-gray-100 {
+  color: #1f2937;
+}
+
+html:not(.dark) .placeholder-gray-500::placeholder {
+  color: #9ca3af;
+}

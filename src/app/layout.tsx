@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -17,21 +17,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "DevTools Hub - Geliştiriciler için Ücretsiz Online Araçlar",
+    default: "DevTools Hub - GeliÅŸtiriciler iÃ§in Ãœcretsiz Online AraÃ§lar",
     template: "%s | DevTools Hub",
   },
   description:
-    "JSON Formatter, Base64 Encoder, Hash Generator, UUID Generator ve daha fazla ücretsiz geliştirici aracı. Tüm araçlar tarayıcınızda çalışır, veri gönderilmez.",
+    "JSON Formatter, Base64 Encoder, Hash Generator, UUID Generator ve daha fazla Ã¼cretsiz geliÅŸtirici aracÄ±. TÃ¼m araÃ§lar tarayÄ±cÄ±nÄ±zda Ã§alÄ±ÅŸÄ±r, veri gÃ¶nderilmez.",
   keywords: [
     "developer tools",
-    "geliştirici araçları",
+    "geliÅŸtirici araÃ§larÄ±",
     "json formatter",
     "base64 encoder",
     "hash generator",
     "uuid generator",
     "regex tester",
     "online tools",
-    "ücretsiz araçlar",
+    "Ã¼cretsiz araÃ§lar",
   ],
   authors: [{ name: "DevTools Hub" }],
   creator: "DevTools Hub",
@@ -41,15 +41,15 @@ export const metadata: Metadata = {
     alternateLocale: "en_US",
     url: "https://devtools-hub.com",
     siteName: "DevTools Hub",
-    title: "DevTools Hub - Geliştiriciler için Ücretsiz Online Araçlar",
+    title: "DevTools Hub - GeliÅŸtiriciler iÃ§in Ãœcretsiz Online AraÃ§lar",
     description:
-      "JSON Formatter, Base64 Encoder, Hash Generator, UUID Generator ve daha fazla ücretsiz geliştirici aracı.",
+      "JSON Formatter, Base64 Encoder, Hash Generator, UUID Generator ve daha fazla Ã¼cretsiz geliÅŸtirici aracÄ±.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevTools Hub - Geliştiriciler için Ücretsiz Online Araçlar",
+    title: "DevTools Hub - GeliÅŸtiriciler iÃ§in Ãœcretsiz Online AraÃ§lar",
     description:
-      "JSON Formatter, Base64 Encoder, Hash Generator, UUID Generator ve daha fazla ücretsiz geliştirici aracı.",
+      "JSON Formatter, Base64 Encoder, Hash Generator, UUID Generator ve daha fazla Ã¼cretsiz geliÅŸtirici aracÄ±.",
   },
   robots: {
     index: true,
@@ -72,6 +72,7 @@ export default function RootLayout({
   return (
     <html lang="tr" className="dark">
       <head>
+        <meta name="google-site-verification" content="FT_cpirtRlqzncH3p-WM6iWW6H98WLNmfvIImKSzisM" />
         {/* Google AdSense */}
         {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossOrigin="anonymous"></script> */}
       </head>

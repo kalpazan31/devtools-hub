@@ -1,8 +1,8 @@
-import { MetadataRoute } from "next";
+﻿import { MetadataRoute } from "next";
 import { tools } from "@/lib/tools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://devtools-hub.com";
+  const baseUrl = "https://devtools-hub-masb.vercel.app";
 
   // Static pages
   const staticPages = [

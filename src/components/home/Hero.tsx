@@ -3,7 +3,12 @@
 import React from "react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
-export function Hero() {
+interface HeroProps {
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+}
+
+export function Hero({ searchQuery, setSearchQuery }: HeroProps) {
   const { t } = useLanguage();
 
   return (
@@ -35,7 +40,7 @@ export function Hero() {
           {t.siteDescription}. No ads, no tracking, just pure utility.
         </p>
 
-        {/* Search Bar Placeholder */}
+        {/* Search Bar */}
         <div className="max-w-xl mx-auto mb-16 relative group">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl opacity-30 group-hover:opacity-50 blur transition duration-200"></div>
           <div className="relative flex items-center bg-black/80 backdrop-blur-xl border border-white/10 rounded-xl p-2">
@@ -46,14 +51,21 @@ export function Hero() {
             </div>
             <input 
               type="text" 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search for tools (e.g. JSON, Base64, QR)..." 
-              className="w-full bg-transparent border-none text-white placeholder-gray-500 focus:ring-0 px-4 py-2"
-              disabled
+              className="w-full bg-transparent border-none text-white placeholder-gray-500 focus:ring-0 px-4 py-2 outline-none"
             />
-            <div className="hidden md:flex items-center gap-1 pr-2">
-              <kbd className="px-2 py-1 bg-white/10 rounded text-xs text-gray-400 font-mono">Ctrl</kbd>
-              <kbd className="px-2 py-1 bg-white/10 rounded text-xs text-gray-400 font-mono">K</kbd>
-            </div>
+            {searchQuery && (
+              <button 
+                onClick={() => setSearchQuery("")}
+                className="p-2 text-gray-500 hover:text-white transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
 

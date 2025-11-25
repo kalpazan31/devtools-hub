@@ -1,16 +1,18 @@
 "use client";
 
+import { useState } from "react";
 import { Hero } from "@/components/home/Hero";
 import { ToolsGrid } from "@/components/home/ToolsGrid";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function Home() {
   const { t } = useLanguage();
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <div>
       {/* Hero Section */}
-      <Hero />
+      <Hero searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       {/* AdSense - Top Banner */}
       <div className="border-y border-gray-800 py-4">
@@ -36,7 +38,7 @@ export default function Home() {
           </div>
 
           {/* Tools Grid */}
-          <ToolsGrid />
+          <ToolsGrid searchQuery={searchQuery} />
         </div>
       </section>
 

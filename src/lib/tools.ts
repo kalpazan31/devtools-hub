@@ -171,6 +171,15 @@ export const tools: Tool[] = [
     color: "from-fuchsia-500 to-purple-500",
     category: "design",
   },
+  {
+    id: "pythonPlayground",
+    slug: "python-playground",
+    name: "Python Playground",
+    description: "Tarayıcıda Python kodu çalıştır",
+    icon: "🐍",
+    color: "from-blue-500 to-yellow-500",
+    category: "code",
+  },
 ];
 
 export function getToolById(id: string): Tool | undefined {

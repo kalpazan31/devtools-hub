@@ -12,7 +12,10 @@ interface ToolLayoutProps {
 
 export function ToolLayout({ tool, children }: ToolLayoutProps) {
   const { t } = useLanguage();
-  const toolTranslation = t.tools[tool.id as keyof typeof t.tools];
+  const toolTranslation = t.tools[tool.id as keyof typeof t.tools] || {
+    name: tool.name,
+    description: tool.description
+  };
 
   return (
     <div className="min-h-screen">

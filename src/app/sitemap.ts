@@ -2,7 +2,7 @@
 import { tools } from "@/lib/tools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://devtools-hub-masb.vercel.app";
+  const baseUrl = "https://devtools-hub.com";
 
   // Static pages
   const staticPages = [

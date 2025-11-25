@@ -39,7 +39,7 @@ export function Footer() {
                     href={`/tools/${tool.slug}`}
                     className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
                   >
-                    {toolTranslation.name}
+                    {toolTranslation?.name || tool.name}
                   </Link>
                 );
               })}

@@ -121,8 +121,8 @@ export default function AboutPage() {
                       {tool.icon}
                     </div>
                     <div>
-                      <p className="text-white font-medium">{toolT.name}</p>
-                      <p className="text-sm text-gray-500">{toolT.description}</p>
+                      <p className="text-white font-medium">{toolT?.name || tool.name}</p>
+                      <p className="text-sm text-gray-500">{toolT?.description || tool.description}</p>
                     </div>
                   </Link>
                 );

@@ -24,10 +24,30 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom, #0a0a0a, #111111);
+  background: radial-gradient(circle at top center, #1a1a1a 0%, #000000 100%);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+  border: 2px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
 }
 
 /* Dark mode default */
@@ -37,7 +57,7 @@ html.dark {
 }
 
 html.dark body {
-  background: linear-gradient(to bottom, #0a0a0a, #111111);
+  background: radial-gradient(circle at 50% 0%, #1f1f2e 0%, #0a0a0a 60%, #000000 100%);
 }
 
 /* Light mode */
